@@ -3,5 +3,6 @@ export interface CreatePlayerDto {
   readonly email: string;
   readonly name: string;
   readonly ranking: string;
-  readonly urlPlayerPicture: string;
+  readonly sport: string;
+  readonly team: string;
 }

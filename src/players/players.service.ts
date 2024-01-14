@@ -39,14 +39,15 @@ export class PlayersService {
     }
 
     private create(createPlayerDto: CreatePlayerDto): void {
-        const { name, mobilePhone, email, ranking, urlPlayerPicture } = createPlayerDto;
+        const { name, mobilePhone, email, ranking, sport, team } = createPlayerDto;
         const player: Player = {
             _id: uuid(),
             name,
             mobilePhone,
             email,
             ranking,
-            urlPlayerPicture
+            sport,
+            team
         };
         this.logger.log(`createPlayerDto: ${JSON.stringify(player)}`);
         this.players.push(player);
